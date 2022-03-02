@@ -1,0 +1,90 @@
+#s-home {
+  padding: 0px 50px;
+  background-color: $bg-main;
+  position: relative;
+  @include responsive-tablet {
+    padding: 0px 20px;
+  }
+  .grid-layout {
+    #home {
+      display: flex;
+      align-items: center;
+      height: 90vh;
+      overflow: hidden;
+      width: 100%;
+      #home-container-text {
+        width: 60%;
+        flex-direction: column;
+        @include responsive-tablet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          padding: 0px;
+        }
+        h1 {
+          color: $color-white;
+          font: {
+            size: 2.4rem;
+            weight: 400;
+            family: $font-secondary;
+          }
+          #home-name {
+            font-size: 5.6rem;
+            font-weight: 600;
+          }
+          .typewriter {
+            font: {
+              family: $font-secondary;
+            }
+          }
+        }
+        a {
+          background: linear-gradient(
+            225deg,
+            rgba(102, 16, 242, 0.3) 0%,
+            rgba(102, 16, 242, 0) 100%
+          );
+          color: $color-white;
+          backdrop-filter: blur(10px);
+          padding: 15px 30px;
+          max-width: 250px;
+          @include flexbox-center;
+          border: 1px solid rgba(102, 16, 242, 0.5);
+          transition: all 0.7s ease;
+          margin-top: 30px;
+          font: {
+            size: 18px;
+            weight: 500;
+            family: $font-secondary;
+          }
+          &:hover {
+            padding: 15px 45px;
+            max-width: 280px;
+            background: linear-gradient(
+              225deg,
+              rgba(102, 16, 242, 0.6) 0%,
+              rgba(102, 16, 242, 0) 100%
+            );
+          }
+        }
+      }
+      #home-container-photo {
+        width: 40%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-height: 347px;
+        }
+        @include responsive-tablet {
+          display: none;
+        }
+      }   
+    }
+  }
+}
